@@ -38,7 +38,7 @@ namespace prueba1
                 var servidores = new List<Server> { server1 };
 
                 // 2. Ruta temporal para el XML
-                var tempFile = Path.Combine(Path.GetTempPath(), "servers_test.xml");
+                var tempFile = Path.Combine(Directory.GetCurrentDirectory(), "servers_test.xml");
 
                 // 3. Crear repositorio y guardar
                 var repo = new XMLRepositorio(tempFile);
