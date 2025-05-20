@@ -14,11 +14,7 @@ namespace Tests
     public class SshServiceTests
     {
 
-        Apps.Utils.EncryptionHelper des = new Apps.Utils.EncryptionHelper();
-
-        [TestMethod]
-
-        
+        [TestMethod]   
         public void ExecuteCommand_Valid_CallsConnectExecuteDisconnect()
         {
             // Arrange
@@ -43,7 +39,7 @@ namespace Tests
             {
                 IP = "host",
                 Username = "usr",
-                EncryptedPassword = des.Encrypt("pwd") // puedes usar un string plano también
+                EncryptedPassword = EncryptionHelper.Encrypt("pwd") // puedes usar un string plano también
             };
 
             // Act

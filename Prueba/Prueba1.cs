@@ -1,15 +1,15 @@
-﻿
-using Core.Models;
+﻿using Core.Models;
 using Core.Repositorios;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Apps.Utils;
 
 namespace prueba1
 {
-    /*
+    
     public class Prueba1
     {
        
@@ -22,6 +22,7 @@ namespace prueba1
                     Name = "Servidor-Prueba",
                     IP = "192.168.1.100",
                     Username = "user",
+
                     EncryptedPassword = EncryptionHelper.Encrypt("password") // En la práctica usa EncryptionHelper.Encrypt("password")
                 };
                 server1.EncryptedPassword = "<password_encriptado>";
@@ -56,5 +57,5 @@ namespace prueba1
 
             }
         
-    }*/
+    }
 }

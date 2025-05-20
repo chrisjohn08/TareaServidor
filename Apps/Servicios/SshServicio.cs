@@ -1,5 +1,6 @@
 ﻿using Core.Models;
 using Renci.SshNet;
+using Apps.Utils;
 using System;
 
 namespace Apps.Servicios
@@ -12,8 +13,8 @@ namespace Apps.Servicios
             if (string.IsNullOrWhiteSpace(commandText)) throw new ArgumentException("El comando no puede estar vacío.");
 
             // Desencriptar la contraseña
-            Utils.EncryptionHelper des = new Utils.EncryptionHelper();
-            var password = des.Decrypt(server.EncryptedPassword);
+            
+            var password = EncryptionHelper.Decrypt(server.EncryptedPassword);
 
             try
             {

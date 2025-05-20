@@ -7,17 +7,17 @@ using System.Security.Cryptography;
 
 namespace Apps.Utils
 {
-    public class EncryptionHelper
+    public static class EncryptionHelper
     {
-        public string Encrypt(string plainText)
+        public static string Encrypt(string plainText)
         {
             // Aquí se puede implementar encriptación con AES, por ejemplo
             var data = Encoding.UTF8.GetBytes(plainText);
             var encrypted = ProtectedData.Protect(data, null, DataProtectionScope.CurrentUser);
-            return Convert.ToBase64String(encrypted);
+            return Convert.ToBase64String(encrypted).ToString();
         }
 
-        public string Decrypt(string encryptedText)
+        public static string Decrypt(string encryptedText)
         {
             var data = Convert.FromBase64String(encryptedText);
             var decrypted = ProtectedData.Unprotect(data, null, DataProtectionScope.CurrentUser);
